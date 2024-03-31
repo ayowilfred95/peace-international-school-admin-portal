@@ -31,7 +31,7 @@ To run this project locally, follow these steps:
 This frontend interacts with a backend implemented in Node.js and MySQL database. Make sure you have the backend set up and running before using this frontend.
 
 
-## Screenshots
+## Visual Display
 
 ![Screenshot 1](screenshots/screenshot1.png)
 ![Screenshot 2](screenshots/screenshot2.png)
