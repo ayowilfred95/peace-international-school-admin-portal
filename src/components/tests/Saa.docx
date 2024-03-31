@@ -1,0 +1,862 @@
+import {
+  IconButton,
+  Typography,
+  Grid,
+  List,
+  ListItem,
+  Avatar,
+  Divider,
+  TextField,
+ 
+} from "@mui/material";
+import { Box } from "@mui/system";
+import React from "react";
+import "./Result.css";
+import PrintIcon from "@mui/icons-material/Print";
+import { FaFilePdf } from "react-icons/fa";
+import logo from "../../assets001/school-logo.png";
+import AllInboxIcon from "@mui/icons-material/AllInbox";
+import EmailIcon from "@mui/icons-material/Email";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import LanguageIcon from "@mui/icons-material/Language";
+import passport from "../../assets001/images/passport.jpg";
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+
+const ResultData = [
+  {
+    id: 1,
+    subject: "English Language",
+    ca: 30,
+    exam: 60,
+    firstTerm: 57,
+    secondTerm: 48,
+    curriculum_avg: 50,
+    curriculum_total: 40,
+    position: 12,
+    remarks: "Very Good",
+  },
+  {
+    id: 2,
+    subject: "Mathematics",
+    ca: 30,
+    exam: 60,
+    firstTerm: 57,
+    secondTerm: 48,
+    curriculum_avg: 50,
+    curriculum_total: 40,
+    position: 12,
+    remarks: "Very Good",
+  },
+  {
+    id: 3,
+    subject: "Business Studies",
+    ca: 30,
+    exam: 60,
+    firstTerm: 57,
+    secondTerm: 48,
+    curriculum_avg: 50,
+    curriculum_total: 40,
+    position: 12,
+    remarks: "Very Good",
+  },
+  {
+    id: 4,
+    subject: "Basic Technology",
+    ca: 30,
+    exam: 60,
+    firstTerm: 57,
+    secondTerm: 48,
+    curriculum_avg: 50,
+    curriculum_total: 40,
+    position: 12,
+    remarks: "Very Good",
+  },
+  {
+    id: 5,
+    subject: "Computer ",
+    ca: 30,
+    exam: 60,
+    firstTerm: 57,
+    secondTerm: 48,
+    curriculum_avg: 50,
+    curriculum_total: 40,
+    position: 12,
+    remarks: "Very Good",
+  },
+  {
+    id: 6,
+    subject: "PHE",
+    ca: 30,
+    exam: 60,
+    firstTerm: 57,
+    secondTerm: 48,
+    curriculum_avg: 50,
+    curriculum_total: 40,
+    position: 12,
+    remarks: "Very Good",
+  },
+  {
+    id: 7,
+    subject: "Fine Art",
+    ca: 30,
+    exam: 60,
+    firstTerm: 57,
+    secondTerm: 48,
+    curriculum_avg: 50,
+    curriculum_total: 40,
+    position: 12,
+    remarks: "Very Good",
+  },
+  {
+    id: 8,
+    subject: "Music",
+    ca: 30,
+    exam: 60,
+    firstTerm: 57,
+    secondTerm: 48,
+    curriculum_avg: 50,
+    curriculum_total: 40,
+    position: 12,
+    remarks: "Very Good",
+  },
+  {
+    id: 9,
+    subject: "Yoruba",
+    ca: 30,
+    exam: 60,
+    firstTerm: 57,
+    secondTerm: 48,
+    curriculum_avg: 50,
+    curriculum_total: 40,
+    position: 12,
+    remarks: "Very Good",
+  },
+  {
+    id: 10,
+    subject: "Igbo",
+    ca: 30,
+    exam: 60,
+    firstTerm: 57,
+    secondTerm: 48,
+    curriculum_avg: 50,
+    curriculum_total: 40,
+    position: 12,
+    remarks: "Very Good",
+  },
+  {
+    id: 11,
+    subject: "French",
+    ca: 30,
+    exam: 60,
+    firstTerm: 57,
+    secondTerm: 48,
+    curriculum_avg: 50,
+    curriculum_total: 40,
+    position: 12,
+    remarks: "Very Good",
+  },
+  {
+    id: 12,
+    subject: "Agricultural Science",
+    ca: 30,
+    exam: 60,
+    firstTerm: 57,
+    secondTerm: 48,
+    curriculum_avg: 50,
+    curriculum_total: 40,
+    position: 12,
+    remarks: "Very Good",
+  },
+  {
+    id: 13,
+    subject: "Home Economics",
+    ca: 30,
+    exam: 60,
+    firstTerm: 57,
+    secondTerm: 48,
+    curriculum_avg: 50,
+    curriculum_total: 40,
+    position: 12,
+    remarks: "Very Good",
+  },
+  {
+    id: 14,
+    subject: "Security Education",
+    ca: 30,
+    exam: 60,
+    firstTerm: 57,
+    secondTerm: 48,
+    curriculum_avg: 50,
+    curriculum_total: 40,
+    position: 12,
+    remarks: "Very Good",
+  },
+  {
+    id: 15,
+    subject: "Social Studies",
+    ca: 30,
+    exam: 60,
+    firstTerm: 57,
+    secondTerm: 48,
+    curriculum_avg: 50,
+    curriculum_total: 40,
+    position: 12,
+    remarks: "Very Good",
+  },
+];
+
+const ResultCard = () => {
+  return (
+    <Box mb={10}>
+      <Box sx={{ textAlign: "right", color: "#000" }}>
+        <IconButton sx={{ color: "#000" }}>
+          <PrintIcon />
+        </IconButton>
+        <IconButton sx={{ color: "#000" }}>
+          <FaFilePdf />
+        </IconButton>
+      </Box>
+      <Box
+        sx={{
+          textAlign: "center",
+          margin: "0 auto",
+          width: { lg: "97%", md: "97%", sm: "98%", xs: "99%" },
+        }}
+      >
+        <Box display="flex" justifyContent="center" alignItems="center">
+          <Avatar src={logo} />
+          <Typography
+            variant="h5"
+            sx={{
+              fontFamily: "Gilroy-Heavy",
+              fontSize: { xs: "14px", lg: "20px" },
+            }}
+          >
+            C.M.S Grammer School, Bariga Lagos
+          </Typography>
+        </Box>
+        <Box  mb={2} sx={{ margin: "0 auto", width: "90%" }}>
+          <Grid
+            container
+            sx={{
+              borderRadius: "20px",
+              fontFamily: "Gilroy-Regular",
+            }}
+          >
+            <Grid item xs={12} md={6} sm={6} lg={6} >
+              <Box
+               
+                sx={{
+                  my:{lg:2, xs:1},
+                  pr:{lg:3.5, xs:0},
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: "flex-end",
+                  borderRight: {
+                    lg: "1px solid #671e78",
+                    xs: "none",
+                    md: "1px solid #671e781a",
+                    sm: "1px solid #671e781a",
+                  },
+                  textAlign:{lg:'right', xs:'center'},
+                
+                }}
+              >
+           
+                  <span style={{ fontSize: "14px", marginBottom:'10px' }}>
+                    P.O Box 394, Yaba, Lagos  <AllInboxIcon sx={{ ml: 1,mb:-0.6, fontSize: "18px" }} />
+                  </span>{" "}
+                 
+                    {" "}
+                   
+                 
+               
+              
+                  <span style={{ fontSize: "14px" }}>
+                    cmsgrammerschool@gmail.com    <EmailIcon sx={{ ml: 1,mb:-0.6, fontSize: "18px" }} />
+                  </span>{" "}
+              
+             
+              </Box>
+            </Grid>
+            <Grid item  xs={12} md={6} sm={6} sx={{ textAlign: "left", my:{lg:2, xs:-0.6} }}>
+              <Box
+                sx={{
+                  textAlign:{lg:"left", xs:'center'},
+                  ml:{lg:2, xs:0},
+                }}
+              >
+              
+               
+                  <span style={{ fontSize: "14px",  marginBottom:'12px' }}>
+                  <LocalPhoneIcon sx={{ mr: 1, mb:-0.6, fontSize: "18px" }} />
+                    0802233332, 080342623688 
+                  </span>{" "}
+              <br/>
+                
+               
+               
+                  <span style={{ fontSize: "14px" }}>
+                  <LanguageIcon sx={{ mr: 1,mb:-0.6, fontSize: "18px" }} />
+                    www.cms.ogs.org
+                  </span>{" "}
+                 
+               
+              </Box>
+            </Grid>
+          </Grid>
+        </Box>
+
+        <Box
+          sx={{ bgcolor: "#671E78", p: 1, borderRadius: "20px", pb: 2, mt: 2 }}
+        >
+          <Typography
+            variant="body"
+            sx={{
+              color: "#fff",
+              fontFamily: "Gilroy-Medium",
+              fontSize: { xs: "10px", md: "16px", sm: "14px", lg: "16px" },
+            }}
+          >
+            Junior Secondary School Student Internal Academic Report Sheet
+          </Typography>
+        </Box>
+        <Box
+          sx={{
+            bgcolor: "#671E78",
+            width: "40%",
+            margin: "0 auto",
+            p: 1,
+            borderRadius: "20px",
+            position: "relative",
+            top: "-20px",
+          }}
+        >
+          <Typography
+            variant="body"
+            sx={{
+              color: "#fff",
+              fontSize: { lg: "16px", md: "16px", sm: "14px", xs: "10px" },
+              fontFamily: "Gilroy-Regular",
+            }}
+          >
+            Third Term
+          </Typography>
+        </Box>
+
+        <Box sx={{ margin: "0 auto", width: "90%" }}>
+          <Grid
+            container
+            sx={{
+              bgcolor: "#671E781a",
+              borderRadius: "20px",
+              fontFamily: "Gilroy-Regular",
+            }}
+          >
+            <Grid item xs={12} md={6} sm={6} display="flex">
+              <Avatar
+                src={passport}
+                variant="rounded"
+                sx={{
+                  border: "1px solid #671e78",
+                  width: "100px",
+                  height: "120px",
+                  borderRadius: "20px",
+                }}
+              />
+              <Box
+                my={2}
+                pr={2}
+                sx={{
+                  borderRight: {
+                    lg: "1px solid #671e78",
+                    xs: "none",
+                    md: "1px solid #671e781a",
+                    sm: "1px solid #671e781a",
+                  },
+                  textAlign: "left",
+                  ml: 2,
+                }}
+              >
+                <table className="result_table">
+                  <tr>
+                    <th>Name:</th>
+                    <td>Adeola James</td>
+                  </tr>
+                  <tr>
+                    <th>House:</th>
+                    <td>Bobington</td>
+                  </tr>
+                  <tr>
+                    <th>Term:</th>
+                    <td>Third Term</td>
+                  </tr>
+                  <tr>
+                    <th>Class:</th>
+                    <td>Jss 1</td>
+                  </tr>
+                </table>
+              </Box>
+            </Grid>
+            <Grid item my={2} xs={12} md={6} sm={6} sx={{ textAlign: "left" }}>
+              <table className="result_table">
+                <tr>
+                  <th>Admission Number:</th>
+                  <td>1558938</td>
+                </tr>
+                <tr>
+                  <th>Academic Session:</th>
+                  <td>2022/2023</td>
+                </tr>
+                <tr>
+                  <th>No. of Times School Opened:</th>
+                  <td>108</td>
+                </tr>
+                <tr>
+                  <th>No. of Times Present:</th>
+                  <td>102</td>
+                </tr>
+              </table>
+            </Grid>
+          </Grid>
+        </Box>
+      </Box>
+      <Box mt={3} className="sheet_table" sx={{ overflowX: "scroll" }}>
+        <table style={{ width: "100%" }}>
+          <tr>
+            <th style={{ paddingLeft: "10px", paddingRight: "10px" }}>
+              SUBJECTS
+            </th>
+            <th className="transform_head">C.A Score(30)</th>
+            <th className="transform_head">Exam Score (70)</th>
+            <th className="transform_head">Weighted Avg</th>
+            <th className="transform_head">1st Term Score</th>
+            <th className="transform_head">2nd Term Score</th>
+            <th className="transform_head">Curric. Avg</th>
+            <th className="transform_head">Curric. Total</th>
+            <th className="transform_head">Position</th>
+            <th style={{ paddingLeft: "10px", paddingRight: "10px" }}>
+              REMARK
+            </th>
+          </tr>
+          {ResultData.map((item, i) => (
+            <tr key={item.id}>
+              <td style={{ textAlign: "justify", paddingLeft: "10px" }}>
+                {item.subject}
+              </td>
+              <td>{item.ca}</td>
+              <td>{item.exam}</td>
+              <td>{item.exam}</td>
+              <td>{item.firstTerm}</td>
+              <td>{item.secondTerm}</td>
+              <td>{item.curriculum_avg}</td>
+              <td>{item.curriculum_total}</td>
+              <td>{item.position}</td>
+              <td>{item.remarks}</td>
+            </tr>
+          ))}
+
+          <tr>
+            <th style={{ height: "40px" }}>TOTAL FINAL SCORE</th>
+            <td colSpan={3}>1234</td>
+            <td colSpan={4}>
+              <strong>TOTAL FINAL SCORE:</strong>
+              <span>1234</span>
+            </td>
+          </tr>
+        </table>
+      </Box>
+
+      <Box mt={2} mb={2}>
+        <Grid container>
+          <Grid
+            item
+            lg={2.9}
+            xs={5.9}
+            sx={{
+              bgcolor: "#671e781a",
+              border: "1px solid #671e78",
+              borderRadius: "10px",
+              mr: { lg: 0.5, md: 0.5, xs: 0.5 },
+              mb: { lg: 0, md: 0, xs: 0.5 },
+            }}
+          >
+            <Typography
+              variant="body"
+              sx={{
+                fontFamily: "Gilroy-Regular",
+                fontWeight: "bolder",
+                fontSize: { xs: "14px", lg: "12px" },
+                m: 2,
+              }}
+            >
+              SKILLS
+            </Typography>
+            <Divider />
+            <Box p={0}>
+              <ListItem display="flex">
+                <Typography variant="body1" sx={{ fontSize: "9px" }}>
+                  Musical Instrument
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{ fontSize: "9px", marginLeft: "auto" }}
+                >
+                  3
+                </Typography>
+              </ListItem>
+              <ListItem display="flex">
+                <Typography variant="body1" sx={{ fontSize: "9px" }}>
+                  Musical Instrument
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{ fontSize: "9px", marginLeft: "auto" }}
+                >
+                  3
+                </Typography>
+              </ListItem>
+              <ListItem display="flex">
+                <Typography variant="body1" sx={{ fontSize: "9px" }}>
+                  Musical Instrument
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{ fontSize: "9px", marginLeft: "auto" }}
+                >
+                  3
+                </Typography>
+              </ListItem>
+              <ListItem display="flex">
+                <Typography variant="body1" sx={{ fontSize: "9px" }}>
+                  Musical Instrument
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{ fontSize: "9px", marginLeft: "auto" }}
+                >
+                  3
+                </Typography>
+              </ListItem>
+            </Box>
+          </Grid>
+          <Grid
+            item
+            lg={2.9}
+            xs={5.9}
+            sx={{
+              bgcolor: "#671e781a",
+              border: "1px solid #671e78",
+              borderRadius: "10px",
+              mr: { lg: 0.5, md: 0.5, xs: 0 },
+              mb: { lg: 0, md: 0, xs: 0.5 },
+            }}
+          >
+            <Typography
+              variant="body"
+              sx={{
+                fontFamily: "Gilroy-Regular",
+                fontWeight: "bolder",
+                fontSize: { xs: "10px", lg: "12px" },
+                m: 2,
+              }}
+            >
+              SPORTS AND GAMES
+            </Typography>
+            <Divider />
+            <Box p={0}>
+              <ListItem display="flex">
+                <Typography variant="body1" sx={{ fontSize: "9px" }}>
+                  Musical Instrument
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{ fontSize: "9px", marginLeft: "auto" }}
+                >
+                  3
+                </Typography>
+              </ListItem>
+              <ListItem display="flex">
+                <Typography variant="body1" sx={{ fontSize: "9px" }}>
+                  Musical Instrument
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{ fontSize: "9px", marginLeft: "auto" }}
+                >
+                  3
+                </Typography>
+              </ListItem>
+              <ListItem display="flex">
+                <Typography variant="body1" sx={{ fontSize: "9px" }}>
+                  Musical Instrument
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{ fontSize: "9px", marginLeft: "auto" }}
+                >
+                  3
+                </Typography>
+              </ListItem>
+              <ListItem display="flex">
+                <Typography variant="body1" sx={{ fontSize: "9px" }}>
+                  Musical Instrument
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{ fontSize: "9px", marginLeft: "auto" }}
+                >
+                  3
+                </Typography>
+              </ListItem>
+            </Box>
+          </Grid>
+          <Grid
+            item
+            lg={2.9}
+            xs={5.9}
+            sx={{
+              bgcolor: "#671e781a",
+              border: "1px solid #671e78",
+              borderRadius: "10px",
+              mr: { lg: 0.5, md: 0.5, xs: 0.5 },
+              mb: { lg: 0, md: 0, xs: 0.3 },
+            }}
+          >
+            <Typography
+              variant="body"
+              sx={{
+                fontFamily: "Gilroy-Regular",
+                fontWeight: "bolder",
+                fontSize: { xs: "10px", lg: "12px" },
+                m: 2,
+              }}
+            >
+              SKILLS
+            </Typography>
+            <Divider />
+            <Box p={0}>
+              <ListItem display="flex">
+                <Typography variant="body1" sx={{ fontSize: "9px" }}>
+                  Musical Instrument
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{ fontSize: "9px", marginLeft: "auto" }}
+                >
+                  3
+                </Typography>
+              </ListItem>
+              <ListItem display="flex">
+                <Typography variant="body1" sx={{ fontSize: "9px" }}>
+                  Musical Instrument
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{ fontSize: "9px", marginLeft: "auto" }}
+                >
+                  3
+                </Typography>
+              </ListItem>
+              <ListItem display="flex">
+                <Typography variant="body1" sx={{ fontSize: "9px" }}>
+                  Musical Instrument
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{ fontSize: "9px", marginLeft: "auto" }}
+                >
+                  3
+                </Typography>
+              </ListItem>
+              <ListItem display="flex">
+                <Typography variant="body1" sx={{ fontSize: "9px" }}>
+                  Musical Instrument
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{ fontSize: "9px", marginLeft: "auto" }}
+                >
+                  3
+                </Typography>
+              </ListItem>
+            </Box>
+          </Grid>
+          <Grid
+            item
+            lg={2.9}
+            xs={5.9}
+            sx={{
+              bgcolor: "#671e781a",
+              border: "1px solid #671e78",
+              borderRadius: "10px",
+              mr: { lg: 0.5, md: 0.5, xs: 0 },
+              mb: { lg: 0, md: 0, xs: 0.3 },
+            }}
+          >
+            <Typography
+              variant="body"
+              sx={{
+                fontFamily: "Gilroy-Regular",
+                fontWeight: "bolder",
+                fontSize: { xs: "10px", lg: "12px" },
+                m: 2,
+              }}
+            >
+              BEHAVIOURS
+            </Typography>
+            <Divider />
+            <Box p={0}>
+              <ListItem display="flex">
+                <Typography variant="body1" sx={{ fontSize: "9px" }}>
+                  Musical Instrument
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{ fontSize: "9px", marginLeft: "auto" }}
+                >
+                  3
+                </Typography>
+              </ListItem>
+              <ListItem display="flex">
+                <Typography variant="body1" sx={{ fontSize: "9px" }}>
+                  Musical Instrument
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{ fontSize: "9px", marginLeft: "auto" }}
+                >
+                  3
+                </Typography>
+              </ListItem>
+              <ListItem display="flex">
+                <Typography variant="body1" sx={{ fontSize: "9px" }}>
+                  Musical Instrument
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{ fontSize: "9px", marginLeft: "auto" }}
+                >
+                  3
+                </Typography>
+              </ListItem>
+              <ListItem display="flex">
+                <Typography variant="body1" sx={{ fontSize: "9px" }}>
+                  Musical Instrument
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{ fontSize: "9px", marginLeft: "auto" }}
+                >
+                  3
+                </Typography>
+              </ListItem>
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
+      <Divider sx={{ borderColor: "#671e78 " }} />
+      <Box mt={2}>
+        <Grid container spacing={2}>
+          <Grid item lg={4} xs={12}>
+            <Typography
+              variant="body"
+              sx={{ fontSize: "13px", fontFamily: "Gilroy-Regular" }}
+            >
+              CLASS TEACHER'S COMMENTS
+            </Typography>
+            <TextField
+              fullWidth
+              margin="normal"
+              multiline
+              rows={4}
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    border: "1px solid #671E78",
+                  },
+                },
+              }}
+            />
+          </Grid>
+          <Grid item lg={4} xs={12}>
+            <Typography
+              variant="body"
+              sx={{ fontSize: "13px", fontFamily: "Gilroy-Regular" }}
+            >
+              BOARDING HOUSE MASTER'S COMMENTS
+            </Typography>
+            <TextField
+              fullWidth
+              multiline
+              margin="normal"
+              rows={4}
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    border: "1px solid #671E78",
+                  },
+                },
+              }}
+            />
+          </Grid>
+          <Grid item lg={4} xs={12}>
+            <Typography
+              variant="body"
+              sx={{ fontSize: "13px", fontFamily: "Gilroy-Regular" }}
+            >
+              PRINCIPAL'S COMMENTS
+            </Typography>
+            <TextField
+              margin="normal"
+              fullWidth
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    border: "1px solid #671E78",
+                  },
+                },
+              }}
+              multiline
+              rows={4}
+            />
+          </Grid>
+        </Grid>
+      </Box>
+     
+      <Box
+        mt={2}
+        p={2}
+        sx={{
+          bgcolor: "#671E78",
+          fontFamily: "Gilroy-Regular",
+          color: "#fff",
+          borderRadius: "10px",
+          width: { lg: "50%", sm: "100%", xs: "100%" },
+        }}
+      >
+        <Typography
+          variant="body"
+          sx={{ fontWeight: "500", marginRight: "10px" }}
+        >
+          Check-in-Date:
+        </Typography>
+        <span style={{ fontSize: "12px" }}>12, September, 2022</span>
+        <br />
+        <Typography
+          variant="body"
+          sx={{ fontWeight: "500", marginRight: "10px" }}
+        >
+          Next Term Begins:
+        </Typography>
+        <span style={{ fontSize: "12px" }}>12, September, 2022</span>
+      </Box>
+      <Typography variant="caption" sx={{ fontFamily: "Gilroy-Regular" }}>
+        ..any alteration will render the result invalid
+      </Typography>
+
+    </Box>
+  );
+};
+
+export default ResultCard;

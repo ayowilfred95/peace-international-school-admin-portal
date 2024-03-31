@@ -1,0 +1,7 @@
+.pushNotification{
+    background-image: linear-gradient(rgb(5, 30, 52, 0.5), rgb(5, 30, 52, 0.5)), url('../img/push.jpg');
+    height: 150px;
+    background-size: cover;
+background-position-y:340px ;
+color:rgb(5, 30, 52)
+}
