@@ -1,40 +1,38 @@
-## Minimal [(Free version)](https://minimal-kit-react.vercel.app/)
+# School Admin Portal in Onitsha
 
-![license](https://img.shields.io/badge/license-MIT-blue.svg)
+This is the frontend part of a school admin portal located in Onitsha, Nigeria. The portal is designed to facilitate administrative tasks such as registering teachers and students, assigning courses to teachers, and managing student results.
 
-> Free React Admin Dashboard made with Material-UI components and React.
+## Features
 
-![preview](public/assets/preview.jpg)
+- **Admin Dashboard**: Allows administrators to register teachers and students, and assign courses to teachers.
+- **Teacher Dashboard**: Teachers can view their assigned subjects and register marks for students accordingly.
+- **Students' Portal**: Students can access their results through the portal.
 
-| [Minimal Free](https://minimal-kit-react.vercel.app/) | [Minimal](https://material-ui.com/store/items/minimal-dashboard/) |
-| ----------------------------------------------------- | :---------------------------------------------------------------- |
-| **6** Demo pages                                      | **50+** demo pages                                                |
-| -                                                     | ✓ Multi-language                                                  |
-| -                                                     | ✓ Dark/Light Mode 🌓                                              |
-| -                                                     | ✓ [More components](https://minimals.cc/components)               |
-| -                                                     | ✓ Next.js version                                                 |
-| -                                                     | ✓ TypeScript version                                              |
-| -                                                     | ✓ Design files (Figma & Sketch)                                   |
+## Technology Stack
 
-## Page demo
+- **Frontend**: React.js
+- **Backend**: Node.js
+- **Database**: MySQL
+- **Hosting**: True-host
 
-- [Dashboard](https://minimal-kit-react.vercel.app/dashboard/app)
-- [Users](https://minimal-kit-react.vercel.app/dashboard/user)
-- [Product](https://minimal-kit-react.vercel.app/dashboard/products)
-- [Blog](https://minimal-kit-react.vercel.app/dashboard/blog)
-- [Login](https://minimal-kit-react.vercel.app/login)
-- [Not Found](https://minimal-kit-react.vercel.app/404)
+## Usage
 
-## Getting started
+To run this project locally, follow these steps:
 
-- Recommended `node js 16.x` and `npm 6+`. (suggestion v16.15.0)
-- Install dependencies: `npm install` / `yarn install`
-- Start the project: `npm run start` / `yarn start`
+1. Ensure you have Node.js installed on your machine.
+2. Clone this repository.
+3. Navigate to the project directory.
+4. Run `npm install` or `yarn install` to install dependencies.
+5. Update the base URL in the frontend code to point to your own deployed backend.
+6. Start the development server using `npm start` or `yarn start`.
 
-## License
+## Note
 
-Distributed under the MIT License. See [LICENSE](https://github.com/minimal-ui-kit/minimal.free/blob/main/LICENSE.md) for more information.
+This frontend interacts with a backend implemented in Node.js and MySQL database. Make sure you have the backend set up and running before using this frontend.
 
-## Contact us
 
-Email Us: support@minimals.cc
+## Screenshots
+
+![Screenshot 1](screenshots/screenshot1.png)
+![Screenshot 2](screenshots/screenshot2.png)
+![Screenshot 2](screenshots/screenshot3.png)
